@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Ryan Cormack</Authors>
+    <Description>Make .NET API client for the Monzo banking API</Description>
+    <PackageId>Monzo.NET</PackageId>
+    <PackageTags>monzo, refit</PackageTags>
+    <PackageProjectUrl>https://github.com/ryancormack/Monzo.NET</PackageProjectUrl>
+    <PackageLicense>https://github.com/ryancormack/Monzo.NET/blob/master/LICENSE</PackageLicense>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ryancormack/Monzo.NET</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="4.6.90" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MonzoNet.Models\MonzoNet.Models.csproj" />
+  </ItemGroup>
+
+</Project>
