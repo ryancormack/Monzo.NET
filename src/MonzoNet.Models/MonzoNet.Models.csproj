@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Monzo.Net.Models</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
