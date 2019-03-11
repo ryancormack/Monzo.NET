@@ -4,7 +4,7 @@ var configuration =
     HasArgument("Configuration") ? Argument<string>("Configuration") :
     EnvironmentVariable("Configuration") != null ? EnvironmentVariable("Configuration") : "Release";
 
-var preReleaseSuffix = 1;
+var preReleaseSuffix = beta;
     //HasArgument("PreReleaseSuffix") ? Argument<string>("PreReleaseSuffix") :
     //(AppVeyor.IsRunningOnAppVeyor && AppVeyor.Environment.Repository.Tag.IsTag) ? null :
     //EnvironmentVariable("PreReleaseSuffix") != null ? EnvironmentVariable("PreReleaseSuffix") :
@@ -18,7 +18,7 @@ var buildNumber = 1;
     //EnvironmentVariable("APPVEYOR_BUILD_NUMBER") != null ? int.Parse(EnvironmentVariable("APPVEYOR_BUILD_NUMBER")) :
     //0;
 
-var versionSuffix = 1;//string.IsNullOrEmpty(preReleaseSuffix) ? null : preReleaseSuffix + "-" + buildNumber.ToString("D4");
+var versionSuffix = 1.ToString("D4");//string.IsNullOrEmpty(preReleaseSuffix) ? null : preReleaseSuffix + "-" + buildNumber.ToString("D4");
 
 var artifactsDir = Directory("./artifacts");
 
