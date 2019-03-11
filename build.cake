@@ -4,7 +4,7 @@ var configuration =
     HasArgument("Configuration") ? Argument<string>("Configuration") :
     EnvironmentVariable("Configuration") != null ? EnvironmentVariable("Configuration") : "Release";
 
-var preReleaseSuffix = beta;
+var preReleaseSuffix = "beta";
     //HasArgument("PreReleaseSuffix") ? Argument<string>("PreReleaseSuffix") :
     //(AppVeyor.IsRunningOnAppVeyor && AppVeyor.Environment.Repository.Tag.IsTag) ? null :
     //EnvironmentVariable("PreReleaseSuffix") != null ? EnvironmentVariable("PreReleaseSuffix") :
