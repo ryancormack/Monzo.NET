@@ -15,6 +15,7 @@ var buildNumber =
     AppVeyor.IsRunningOnAppVeyor ? AppVeyor.Environment.Build.Number :
     TravisCI.IsRunningOnTravisCI ? TravisCI.Environment.Build.BuildNumber :
     EnvironmentVariable("BuildNumber") != null ? int.Parse(EnvironmentVariable("BuildNumber")) :
+    EnvironmentVariable("APPVEYOR_BUILD_NUMBER") != null ? int.Parse(EnvironmentVariable("APPVEYOR_BUILD_NUMBER")) :
     0;
 
 var versionSuffix = string.IsNullOrEmpty(preReleaseSuffix) ? null : preReleaseSuffix + "-" + buildNumber.ToString("D4");
