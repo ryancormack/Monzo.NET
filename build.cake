@@ -18,7 +18,7 @@ var buildNumber = 1;
     //EnvironmentVariable("APPVEYOR_BUILD_NUMBER") != null ? int.Parse(EnvironmentVariable("APPVEYOR_BUILD_NUMBER")) :
     //0;
 
-var versionSuffix = 1.ToString("D4");//string.IsNullOrEmpty(preReleaseSuffix) ? null : preReleaseSuffix + "-" + buildNumber.ToString("D4");
+var versionSuffix = string.IsNullOrEmpty(preReleaseSuffix) ? null : preReleaseSuffix + "-" + buildNumber.ToString("D4");
 
 var artifactsDir = Directory("./artifacts");
 
