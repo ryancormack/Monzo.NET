@@ -10,7 +10,7 @@ var preReleaseSuffix = "beta";
     //EnvironmentVariable("PreReleaseSuffix") != null ? EnvironmentVariable("PreReleaseSuffix") :
     //"beta";
     
-var buildNumber = 1;
+var buildNumber = 2;
     //HasArgument("BuildNumber") ? Argument<int>("BuildNumber") :
     //AppVeyor.IsRunningOnAppVeyor ? AppVeyor.Environment.Build.Number :
     //TravisCI.IsRunningOnTravisCI ? TravisCI.Environment.Build.BuildNumber :

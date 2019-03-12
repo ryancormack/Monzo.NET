@@ -10,7 +10,7 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// The Access Token to use for requests.
         /// </summary>
-        [JsonProperty(PropertyName = "access_token_2")]
+        [JsonProperty(PropertyName = "access_token")]
         public string AccessToken { get; set; }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// The OAuth refresh token to use to grant a new access token.
         /// </summary>
-        [JsonProperty(PropertyName = "refresh_token_2")]
+        [JsonProperty(PropertyName = "refresh_token")]
         public string RefreshToken { get; set; }
 
         /// <summary>
