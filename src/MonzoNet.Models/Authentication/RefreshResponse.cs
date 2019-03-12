@@ -34,8 +34,7 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// The OAuth 2 token type. This is set to Bearer
         /// </summary>
-        [JsonProperty(PropertyName = "token_type")]
-        public string TokenType { get; set; }
+        public string TokenType => "Bearer";
 
         /// <summary>
         /// The user ID.
