@@ -1,56 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Transactions
 {
     public class Transaction
     {
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "account_balance")]
+        [JsonPropertyName("account_balance")]
         public long BalanceAfterTransaction { get; set; }
 
-        [JsonProperty(PropertyName = "amount")]
+        [JsonPropertyName("amount")]
         public long Amount { get; set; }
 
-        [JsonProperty(PropertyName = "created")]
+        [JsonPropertyName("created")]
         public DateTime CreatedUtc { get; set; }
 
-        [JsonProperty(PropertyName = "currency")]
+        [JsonPropertyName("currency")]
         public string Currency { get; set; }
 
-        [JsonProperty(PropertyName = "description")]
+        [JsonPropertyName("description")]
         public string Description { get; set; }
 
-        [JsonProperty(PropertyName = "decline_reason")]
+        [JsonPropertyName("decline_reason")]
         public string DeclinedReason { get; set; }
 
-        [JsonProperty(PropertyName = "is_load")]
+        [JsonPropertyName("is_load")]
         public bool IsLoad { get; set; }
 
-        [JsonProperty(PropertyName = "settled")]
+        [JsonPropertyName("settled")]
         public DateTime? SettledUtc { get; set; }
 
-        [JsonProperty(PropertyName = "category")]
+        [JsonPropertyName("category")]
         public string Category { get; set; }
 
-        [JsonProperty(PropertyName = "merchant")]
+        [JsonPropertyName("merchant")]
         public string MerchantId { get; set; }
 
-        //[JsonProperty(PropertyName = "merchant")]
-        //public Merchant Merchant { get; set; }
-
-        [JsonProperty(PropertyName = "metadata")]
+        [JsonPropertyName("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
-        [JsonProperty(PropertyName = "notes")]
+        [JsonPropertyName("notes")]
         public string Notes { get; set; }
 
-        [JsonProperty(PropertyName = "emoji")]
+        [JsonPropertyName("emoji")]
         public string Emoji { get; set; }
     }
 }

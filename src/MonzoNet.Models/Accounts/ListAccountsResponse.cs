@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Accounts
 {
@@ -10,7 +8,7 @@ namespace MonzoNet.Models.Accounts
         /// <summary>
         /// A collection of pots
         /// </summary>
-        [JsonProperty(PropertyName = "accounts")]
+        [JsonPropertyName("accounts")]
         public IEnumerable<Account> Accounts { get; set; }
     }
 }

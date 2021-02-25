@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Accounts
 {
@@ -10,19 +8,19 @@ namespace MonzoNet.Models.Accounts
         /// <summary>
         /// The Account Id
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// The Account description
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [JsonPropertyName("description")]
         public string Description { get; set; }
 
         /// <summary>
         /// The UTC time the pot was created
         /// </summary>
-        [JsonProperty(PropertyName = "created")]
+        [JsonPropertyName("created")]
         public DateTime CreatedUtc { get; set; }
     }
 }

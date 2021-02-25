@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Authentication
 {
@@ -10,25 +7,25 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// The Access Token to use for requests.
         /// </summary>
-        [JsonProperty(PropertyName = "access_token")]
+        [JsonPropertyName("access_token")]
         public string AccessToken { get; set; }
 
         /// <summary>
         /// Your client ID.
         /// </summary>
-        [JsonProperty("client_id")]
+        [JsonPropertyName("client_id")]
         public string ClientId { get; set; }
 
         /// <summary>
         /// Number of seconds before the token expires.
         /// </summary>
-        [JsonProperty(PropertyName = "expires_in")]
+        [JsonPropertyName("expires_in")]
         public int ExpiresIn { get; set; }
 
         /// <summary>
         /// The OAuth refresh token to use to grant a new access token.
         /// </summary>
-        [JsonProperty(PropertyName = "refresh_token")]
+        [JsonPropertyName("refresh_token")]
         public string RefreshToken { get; set; }
 
         /// <summary>
@@ -39,7 +36,7 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// The user ID.
         /// </summary>
-        [JsonProperty(PropertyName = "user_id")]
+        [JsonPropertyName("user_id")]
         public string UserId { get; set; }
     }
 }

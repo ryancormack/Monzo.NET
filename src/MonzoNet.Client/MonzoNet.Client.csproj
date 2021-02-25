@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Ryan Cormack</Authors>
-    <Description>Make .NET API client for the Monzo banking API</Description>
+    <Description>A .NET API client for the Monzo banking API</Description>
     <PackageId>Monzo.Net</PackageId>
     <PackageTags>monzo, refit</PackageTags>
     <PackageProjectUrl>https://github.com/ryancormack/Monzo.NET</PackageProjectUrl>
@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Refit" Version="4.6.90" />
+    <PackageReference Include="Refit" Version="6.0.24" />
   </ItemGroup>
 
   <ItemGroup>

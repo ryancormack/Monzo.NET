@@ -1,34 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Transactions
 {
     public class Merchant
     {
-        [JsonProperty(PropertyName = "address")]
+        [JsonPropertyName("address")]
         public MerchantAddress MerchantAddress { get; set; }
 
-        [JsonProperty(PropertyName = "created")]
+        [JsonPropertyName("created")]
         public DateTime CreatedUtc { get; set; }
 
-        [JsonProperty(PropertyName = "group_id")]
+        [JsonPropertyName("group_id")]
         public string GroupId { get; set; }
 
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "logo")]
+        [JsonPropertyName("logo")]
         public string LogoUrl { get; set; }
 
-        [JsonProperty(PropertyName = "emoji")]
+        [JsonPropertyName("emoji")]
         public string Emoji { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty(PropertyName = "category")]
+        [JsonPropertyName("category")]
         public string Category { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Transactions
 {
     public class ListTransactionsResponse
     {
-        [JsonProperty(PropertyName = "transactions")]
+        [JsonPropertyName("transactions")]
         public IEnumerable<Transaction> Transactions { get; set; }
     }
 }

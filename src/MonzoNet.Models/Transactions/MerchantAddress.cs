@@ -1,31 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Transactions
 {
     public class MerchantAddress
     {
-        [JsonProperty(PropertyName = "address")]
+        [JsonPropertyName("address")]
         public string Address { get; set; }
 
-        [JsonProperty(PropertyName = "city")]
+        [JsonPropertyName("city")]
         public string City { get; set; }
 
-        [JsonProperty(PropertyName = "country")]
+        [JsonPropertyName("country")]
         public string CountryCode { get; set; }
 
-        [JsonProperty(PropertyName = "latitude")]
+        [JsonPropertyName("latitude")]
         public double Latitude { get; set; }
 
-        [JsonProperty(PropertyName = "longitude")]
+        [JsonPropertyName("longitude")]
         public string Longitude { get; set; }
 
-        [JsonProperty(PropertyName = "postcode")]
+        [JsonPropertyName("postcode")]
         public string Postcode { get; set; }
 
-        [JsonProperty(PropertyName = "region")]
+        [JsonPropertyName("region")]
         public string Region { get; set; }
     }
 }

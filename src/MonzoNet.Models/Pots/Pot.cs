@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Pots
 {
@@ -10,19 +8,19 @@ namespace MonzoNet.Models.Pots
         /// <summary>
         /// The Pot Id
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// The name of the pot
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// The pot background image.
         /// </summary>
-        [JsonProperty(PropertyName = "style")]
+        [JsonPropertyName("style")]
         public string Style { get; set; }
 
         /// <summary>
@@ -30,31 +28,31 @@ namespace MonzoNet.Models.Pots
         /// as a 64bit integer in minor units of the currency,
         /// eg. pennies for GBP, or cents for EUR and USD.
         /// </summary>
-        [JsonProperty(PropertyName = "balance")]
+        [JsonPropertyName("balance")]
         public long Balance { get; set; }
 
         /// <summary>
         /// The ISO 4217 currency code.
         /// </summary>
-        [JsonProperty(PropertyName = "currency")]
+        [JsonPropertyName("currency")]
         public string Currency { get; set; }
 
         /// <summary>
         /// The UTC time the pot was created
         /// </summary>
-        [JsonProperty(PropertyName = "created")]
+        [JsonPropertyName("created")]
         public DateTime CreatedUtc { get; set; }
 
         /// <summary>
         /// The UTC time the pot was updated
         /// </summary>
-        [JsonProperty(PropertyName = "updated")]
+        [JsonPropertyName("updated")]
         public DateTime UpdatedUtc { get; set; }
 
         /// <summary>
         /// Whether this pot is deleted. The API will be updated soon to not return deleted pots.
         /// </summary>
-        [JsonProperty(PropertyName = "deleted")]
+        [JsonPropertyName("deleted")]
         public bool Deleted { get; set; }
     }
 }

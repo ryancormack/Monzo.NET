@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Refit;
+﻿using Refit;
 
 namespace MonzoNet.Models.Webhooks
 {

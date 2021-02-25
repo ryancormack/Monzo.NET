@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Webhooks
 {
@@ -10,19 +8,19 @@ namespace MonzoNet.Models.Webhooks
         /// <summary>
         /// The Account Id
         /// </summary>
-        [JsonProperty(PropertyName = "account_id")]
+        [JsonPropertyName("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
         /// The Webhook Id
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string WebhookId { get; set; }
 
         /// <summary>
         /// The Webhook Url
         /// </summary>
-        [JsonProperty(PropertyName = "url")]
+        [JsonPropertyName("url")]
         public Uri Url { get; set; }
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Transactions
 {
     public class AnnotateTransactionResponse
     {
-        [JsonProperty(PropertyName = "transaction")]
+        [JsonPropertyName("transaction")]
         public Transaction Transaction { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MonzoNet.Models.Authentication
 {
@@ -10,19 +7,19 @@ namespace MonzoNet.Models.Authentication
         /// <summary>
         /// Is the currenct token authenticated.
         /// </summary>
-        [JsonProperty(PropertyName = "authenticated")]
+        [JsonPropertyName("authenticated")]
         public bool Authenticated { get; set; }
 
         /// <summary>
         /// The client id the current token belongs to
         /// </summary>
-        [JsonProperty(PropertyName = "client_id")]
+        [JsonPropertyName("client_id")]
         public string ClientId { get; set; }
 
         /// <summary>
         /// The user id the current token belongs to
         /// </summary>
-        [JsonProperty(PropertyName = "user_id")]
+        [JsonPropertyName("user_id")]
         public string UserId { get; set; }
     }
 }
